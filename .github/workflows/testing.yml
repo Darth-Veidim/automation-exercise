@@ -1,0 +1,16 @@
+name: style_check
+
+on: [push]
+
+jobs:
+  style_ckeck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - name: "install style checker"
+        run: pip install black
+      - name: "run style check"
+        run: black --check .
