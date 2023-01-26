@@ -6,4 +6,16 @@ The code used in this exercise is based on [Chapter 7 of the book "Learning Scie
 
 ## License
 
+
+asdfadsf
+
+dsa
+
+
+
+
+adsf
+sadfa
+
+
 Please check the `LICENSE` file in this repository.
