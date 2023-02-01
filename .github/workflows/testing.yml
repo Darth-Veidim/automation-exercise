@@ -36,7 +36,7 @@ jobs:
       - name: "archive test coverage results"      
         uses: actions/upload-artifact@v3
         with:
-          name: coverage-report
+          name: dot_coverage-report
           path: .coverage
           retention-days: 1
   coverage_report:
@@ -58,7 +58,7 @@ jobs:
       - name: "upload coverage.xml"
         uses: actions/upload-artifact@v3
         with:
-          name: coverage-report
+          name: coverage_xml-report
           path: coverage.xml
           retention-days: 30
           
