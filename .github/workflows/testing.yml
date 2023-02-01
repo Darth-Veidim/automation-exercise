@@ -21,6 +21,9 @@ jobs:
       - uses: actions/setup-python@v2
         with:
           python-version: '3.8'
+          name: my-artifact
+          path: .coverage
+          retention-days: 1
       - name: "install coverage"
         run: pip install -U coverage
       - name: "create a coverage report"
