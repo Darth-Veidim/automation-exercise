@@ -24,4 +24,4 @@ jobs:
       - name: "install coverage"
         run: pip install -U coverage
       - name: "create a coverage report"
-        run: coverage run -m pytest
+        run: coverage report -m
