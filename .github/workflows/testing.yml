@@ -23,6 +23,10 @@ jobs:
           python-version: '3.8'
       - name: "install coverage"
         run: pip install -U coverage
+      - name: "install pytest"
+        run: pip install -U pytest
+      - name: "run coverage test"
+        run: coverage run -m pytest
       - name: "create a coverage report"
         run: coverage -m report
       - name: "archive test coverage results"      
