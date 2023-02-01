@@ -24,4 +24,4 @@ jobs:
       - name: "install coverage"
         run: pip install -U coverage
       - name: "create a coverage report"
-        run: coverage report -m
+        run: coverage report
