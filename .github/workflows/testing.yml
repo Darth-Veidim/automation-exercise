@@ -24,4 +24,13 @@ jobs:
       - name: "install coverage"
         run: pip install -U coverage
       - name: "create a coverage report"
-        run: coverage report -m
+        run: ls -l
+      - name: aadslkfadf
+        run: coverage report 
+      - name: "archive test coverage results"      
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: .coverage
+          retention-days: 1
+          
