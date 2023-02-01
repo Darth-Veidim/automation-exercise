@@ -27,6 +27,8 @@ jobs:
         run: pip install -U pytest
       - name: "install numpy"
         run: pip install -U numpy
+      - name: "install matplotlib"
+        run: pip install -U matplotlib
       - name: "run coverage test"
         run: coverage run -m pytest
       - name: "create a coverage report"
