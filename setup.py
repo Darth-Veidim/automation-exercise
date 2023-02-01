@@ -1,3 +1,1 @@
-setup(
-        test_suite="tests"
-        )
+setup(test_suite="tests")
