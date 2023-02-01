@@ -14,6 +14,14 @@ jobs:
         run: pip install black
       - name: "run style check"
         run: black --check .
+  filecreation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          name: my-artifact
+          path: ALALALAL.txt
+          retention-days: 1
   test:
     runs-on: ubuntu-latest
     steps:
@@ -27,4 +35,4 @@ jobs:
       - name: "install coverage"
         run: pip install -U coverage
       - name: "create a coverage report"
-        run: coverage report
+        run: coverage report tests
