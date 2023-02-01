@@ -39,4 +39,26 @@ jobs:
           name: coverage-report
           path: .coverage
           retention-days: 1
+  coverage_report:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+      - name: "download a report"
+        uses: actions/download-artifact@v3
+        with:
+          name: coverage-report
+      - name: "install coverage"
+        run: pip install -U coverage
+      - name: "convert coverage report to xml"
+        run: coverage xml
+      - name: "upload coverage.xml"
+        uses: actions/upload-artifact@v3
+        with:
+          name: coverage-report
+          path: coverage.xml
+          retention-days: 30
           
