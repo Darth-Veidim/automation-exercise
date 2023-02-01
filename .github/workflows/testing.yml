@@ -50,7 +50,7 @@ jobs:
       - name: "download a report"
         uses: actions/download-artifact@v3
         with:
-          name: coverage-report
+          name: dot_coverage-report
       - name: "install coverage"
         run: pip install -U coverage
       - name: "convert coverage report to xml"
