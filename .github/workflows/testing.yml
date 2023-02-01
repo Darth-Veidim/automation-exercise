@@ -32,7 +32,7 @@ jobs:
       - name: "run coverage test"
         run: coverage run -m pytest
       - name: "create a coverage report"
-        run: coverage -m report
+        run: coverage report -m
       - name: "archive test coverage results"      
         uses: actions/upload-artifact@v3
         with:
